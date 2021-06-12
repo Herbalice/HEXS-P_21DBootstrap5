@@ -1,0 +1,208 @@
+@charset "UTF-8";
+// 字型
+
+// bootstrap
+@import "./_bootstrap/functions";
+@import "./variables_custom";  // variables 客製
+@import "./_bootstrap/bootstrap";
+@import "./mixins_custom";  // mixins 客製
+
+// utilities
+
+// custom-navbar 
+.navbar-light {
+    .navbar-nav {
+        .nav-link {
+            &:hover.active,
+            &:focus.active {
+                color: $navbar-light-hover-color;
+            }
+        }
+        .show > .nav-link,
+        .nav-link.active {
+        color: $navbar-light-color;
+        }
+    }
+    // custom-btn
+    .btn {
+        @include media-breakpoint-up(sm) {
+            width:96px;
+        }
+    }
+    
+}
+// ------------------------------------------------------------------------
+
+// custom-btn
+.btn-primary-hover {
+    color: #636057;
+    &:hover {
+        background-color: $redorange-light;
+        color: $white;
+        border-color: $redorange-light;
+    }
+}
+.btn-blue-hover {
+    &:hover {
+        background-color: $blue;
+        color: $white;
+        border-color: $blue;
+    }
+}
+.btn-red-hover {
+    &:hover {
+        background-color: $red;
+        color: $white;
+        border-color: $red;
+    }
+}
+.btn-outline-secondary-hover:hover {
+    &:hover {
+        background-color: $primary;
+        border-color: $primary;
+        color: $secondary;
+        & > .custom-heart {
+            color: $danger;
+        }
+    }
+    & > i {
+        color: $secondary;
+    }
+  }
+// ------------------------------------------------------------------------
+
+// custom-size
+@include media-breakpoint-down(sm) {
+    .navbar-light .btn {
+        +.btn {
+            margin-top: $spacer;
+        }
+    }
+}
+// ------------------------------------------------------------------------
+
+// custom-NavTab
+.nav-link {
+    transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out;
+    &:hover, &:focus {
+        border-bottom: 2px solid $primary !important;
+        color: $dark;
+    }
+    &.active {
+        border-bottom: 2px solid $primary !important;
+        color: $dark;
+        font-weight: bold;
+    }
+}
+.nav-item {
+    @include media-breakpoint-down(sm) {
+        width: 25%;
+    }
+}
+// ------------------------------------------------------------------------
+
+// custom-共用
+.bg-gray { background: #E8E8DB;}
+.bg-gray-dark { background: #494846;}
+.rounded {
+    &-4 {border-radius: 0.5rem; }
+    &-5 {border-radius: 0.7rem; }
+}
+
+.square {
+    height: 20px;
+    line-height: 20px;
+    width: 20px;
+    @include media-breakpoint-up(sm) {
+        &-md {
+            height: 24px;
+            line-height: 24px;
+            width: 24px;
+        }
+    }
+    &-2 {
+        height: 30px;
+        line-height: 30px;
+        width: 30px;
+    }
+}
+.h1 {
+    font-size: $font-size-base * 2;
+    font-weight: bold;
+    letter-spacing: 3px;
+    @include media-breakpoint-down(sm) {
+        font-size: $font-size-base * 1.5;
+        letter-spacing: 2.25px;
+    }
+}
+.h5 {
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.rounded-img {
+    border-radius: 35px;
+}
+.font-BalooTamma {
+    font-family: "Baloo Tamma 2" !important;
+}
+.fontSize {
+    &-1 {
+        font-size: 0.75rem; //12px
+    }
+    &-2 {
+        font-size: 0.875rem; //14px
+    }
+    &-3 {
+        font-size: 1rem; //16px
+    }
+    @include media-breakpoint-up(md) {
+        &-md-3 {
+            font-size: 1rem;
+        }
+    }
+    &-4 {
+        font-size: 1.25rem; //20px
+    }
+    &-5 {
+        font-size: 1.5rem; //24px
+    }
+    @include media-breakpoint-up(md) {
+        &-md-5 {
+            font-size: 1.5rem;
+        }
+    }
+}
+// ------------------------------------------------------------------------
+
+// layout
+
+
+// pages
+// @import "pages/index";
+// @import "pages/product";
+.logo { height: 40px; }
+.tagIcon li {
+    margin-bottom: 10px;
+    margin-right: 25px;
+    @include media-breakpoint-down(sm) {
+        margin-right: 0;
+        width: 25%;
+    }
+}
+.sideAd {
+ top: 60px;
+ height: calc(100vh - 82px);
+ overflow-y: auto;
+}
+.sponsor-tline {
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        background-color: $primary;
+        height: 3px;
+        width: 100%;
+        z-index: -1;
+    }
+}
