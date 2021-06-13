@@ -171,7 +171,108 @@
         </section>
         <!-- Tabs-常見問答 -->
         <section class="tab-pane fade" id="tabQA" role="tabpanel" aria-labelledby="profile-tab">
-          常見問答 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          <ul class="accordion list-unstyled" id="accordionQA">
+            <li class="accordion-item">
+              <h3 class="accordion-header" id="headingOne"><!-- id="heading+編號" -->
+                <button class="accordion-button
+                 btn-outline-primary btn-primaryLight-hover fontSize-2 fontSize-md-3" 
+                 type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <!--
+                    第2個 以後要補上class="accordion-button collapsed"
+                    data-bs-target="#collapse+編號"
+                    aria-expanded="true" 第2個之後要 false
+                    aria-controls="collapse+編號"
+                -->
+                    <span class="font-BalooTamma bg-primary text-dark fontSize-2 fw-bolder text-center rounded me-3">Q1</span>
+                    影片拍完之後可以編輯嗎？
+                </button>
+              </h3>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionQA">
+              <!--
+                  第1個要 class="show"
+                  aria-labelledby="heading+編號"
+              -->
+                <div class="accordion-body text-gray-dark fontSize-3 fontSize-md-2">
+                  可以進行簡易的編輯，內建 5 種濾鏡，影片秒數有3秒、5秒、10秒可以選擇，拍完的當下可以編輯要印出來的影片範圍哦！
+                </div>
+              </div>
+            </li><!-- End List 1 -->
+            <li class="accordion-item">
+              <h3 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed
+                 btn-outline-primary btn-primaryLight-hover fontSize-2 fontSize-md-3" 
+                 type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <span class="font-BalooTamma bg-primary text-dark fontSize-2 fw-bolder text-center rounded me-3">Q2</span>
+                    有提供保固或維修服務嗎？
+                </button>
+              </h3>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionQA">
+                <div class="accordion-body text-gray-dark fontSize-3 fontSize-md-2">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. A dignissimos, omnis consequuntur quas enim nam ipsa quae cumque, hic fuga eum, veniam similique iure placeat impedit cum praesentium laborum saepe.
+                </div>
+              </div>
+            </li><!-- End List 2 -->
+            <li class="accordion-item">
+              <h3 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed
+                 btn-outline-primary btn-primaryLight-hover fontSize-2 fontSize-md-3" 
+                 type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <span class="font-BalooTamma bg-primary text-dark fontSize-2 fw-bolder text-center rounded me-3">Q3</span>
+                    有提供保固或維修服務嗎？
+                </button>
+              </h3>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionQA">
+                <div class="accordion-body text-gray-dark fontSize-3 fontSize-md-2">
+                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body text-gray-dark fontSize-3 fontSize-md-2</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </li><!-- End List 3 -->
+            <li class="accordion-item">
+              <h3 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed
+                 btn-outline-primary btn-primaryLight-hover fontSize-2 fontSize-md-3" 
+                 type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <span class="font-BalooTamma bg-primary text-dark fontSize-2 fw-bolder text-center rounded me-3">Q4</span>
+                    印出來的拍立得照片需要充電嗎？
+                </button>
+              </h3>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionQA">
+                <div class="accordion-body text-gray-dark fontSize-3 fontSize-md-2">
+                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body text-gray-dark fontSize-3 fontSize-md-2</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </li><!-- End List 4 -->
+            <li class="accordion-item">
+              <h3 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed
+                 btn-outline-primary btn-primaryLight-hover fontSize-2 fontSize-md-3" 
+                 type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    <span class="font-BalooTamma bg-primary text-dark fontSize-2 fw-bolder text-center rounded me-3">Q5</span>
+                    運送方式及付款方式有哪些呢？
+                </button>
+              </h3>
+              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionQA">
+                <div class="accordion-body text-gray-dark fontSize-3 fontSize-md-2">
+                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body text-gray-dark fontSize-3 fontSize-md-2</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </li><!-- End List 5 -->
+            <li class="accordion-item">
+              <h3 class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed
+                 btn-outline-primary btn-primaryLight-hover fontSize-2 fontSize-md-3" 
+                 type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    <span class="font-BalooTamma bg-primary text-dark fontSize-2 fw-bolder text-center rounded me-3">Q6</span>
+                    退換貨方式及規則
+                </button>
+              </h3>
+              <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionQA">
+                <div class="accordion-body text-gray-dark fontSize-3 fontSize-md-2">
+                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body text-gray-dark fontSize-3 fontSize-md-2</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </li><!-- End List 6 -->
+          </ul>
           <div class="d-md-none" w3-include-html="sidebar-ad.html"></div><!-- include-html -->
         </section>
         <!-- Tabs-目前進度 -->
