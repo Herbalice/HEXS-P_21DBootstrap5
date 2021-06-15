@@ -128,21 +128,25 @@
     <ul class="nav fontSize-2 fontSize-md-3 text-center" id="myTab" role="tablist">
       <li class="nav-item" role="presentation">
         <a class="nav-link px-0 p-sm-3 active" href="javascript:void(0)" 
+          onclick="Animate2id('#myTabContent');"
           data-bs-toggle="tab" data-bs-target="#tabProject"
           role="tab" aria-controls="project-dec" aria-selected="true">專案介紹</a>
       </li>
       <li class="nav-item" role="presentation">
         <a class="nav-link px-0 p-sm-3" href="javascript:void(0)" 
+          onclick="Animate2id('#myTabContent');"
           data-bs-toggle="tab" data-bs-target="#tabQA"
           role="tab" aria-controls="project-dec" aria-selected="true">常見問答</a>
       </li>
       <li class="nav-item" role="presentation">
         <a class="nav-link px-0 p-sm-3" href="javascript:void(0)" 
+          onclick="Animate2id('#myTabContent');"
           data-bs-toggle="tab" data-bs-target="#tabNew"
           role="tab" aria-controls="project-dec" aria-selected="true">目前進度</a>
       </li>
       <li class="nav-item" role="presentation">
         <a class="nav-link px-0 p-sm-3" href="javascript:void(0)" 
+          onclick="Animate2id('#myTabContent');"
           data-bs-toggle="tab" data-bs-target="#tabComment"
           role="tab" aria-controls="project-dec" aria-selected="true">留言</a>
       </li>
@@ -310,7 +314,7 @@
           <div class="mb-3">
             <label for="project" class="form-label w-100">贊助方案</label>
             <select class="form-select" id="project" aria-label="select project" required>
-              <option selected disabled>請選擇一個方案</option>
+              <option value="" selected disabled>請選擇一個方案</option>
               <option value="方案 1">方案 1</option>
               <option value="方案 2">方案 2</option>
               <option value="方案 3">方案 3</option>
@@ -345,7 +349,7 @@
           <div class="mb-3">
             <label for="payment" class="form-label w-100">付款方式</label>
             <select id="payment" class="form-select" aria-label="select payment" required>
-              <option selected disabled>請選擇付款方式</option>
+              <option value selected disabled>請選擇付款方式</option>
               <option value="credit card">信用卡付款</option>
               <option value="debit card">金融卡付款</option>
               <option value="COD">貨到付款</option>
@@ -399,8 +403,17 @@
 </div>
 
 
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
 <script>
+  // 滾動導航
+  function Animate2id(id) {
+      var sss = $(id).offset().top;
+      $('html,body').animate({
+          scrollTop: sss-60
+      }, 150);
+  }
+
   // Tooltips 初始化
   var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
   var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
