@@ -194,10 +194,11 @@
         width: 25%;
     }
 }
-.sideAd {
+.sideMain {
  top: 60px;
  height: calc(100vh - 82px);
  overflow-y: auto;
+ z-index: 800;
 }
 .sponsor-tline {
     position: relative;
